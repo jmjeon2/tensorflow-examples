@@ -78,7 +78,7 @@ if ckpt and tf.train.checkpoint_exists(ckpt.model_checkpoint_path):
 else:
     sess.run(tf.global_variables_initializer())
 #
-for epoch in range(98):
+for epoch in range(0):
     for i in range(total_batch):
         batch_xs, batch_ys = mnist.train.next_batch(batch_size)
         noise = get_noise(batch_size, n_noise)
@@ -114,3 +114,19 @@ saver.save(sess, './Saver/GanDemo02/GanDemo02.ckpt',global_step = global_step)
 
 
 print('Learning Finished!')
+
+def one_hot(i):
+	return sess.run(tf.one_hot([i],10))
+
+def sample_show(i):
+    a=sess.run(tf.one_hot([i],10))
+    for k in range(9):
+        a=np.append(a,one_hot(i),axis=0)
+        
+    sample = sess.run(G,feed_dict={Y:a,Z:get_noise(10,128)})
+    fig, ax = plt.subplots(1, 10, figsize=(10, 1))
+    for k in range(10):
+            ax[k].set_axis_off()
+            ax[k].imshow(np.reshape(sample[k],(28,28)))
+    
+    plt.show()
