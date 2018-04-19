@@ -24,7 +24,6 @@ b_decode = tf.Variable(tf.random_normal([n_input]))
 decoder = tf.nn.sigmoid(tf.add(tf.matmul(encoder, W_decode), b_decode))
 
 cost = tf.reduce_mean(tf.pow(X-decoder, 2))#Y 대신 원래값 X로 cost설정
-#pow말고 square 로 해보기
 
 optimizer = tf.train.RMSPropOptimizer(learning_rate).minimize(cost)
 
