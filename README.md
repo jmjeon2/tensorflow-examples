@@ -3,5 +3,5 @@
 * Supervised Learning
 
 * Unsupervised Learning
- CNN
- GAN
+ - CNN
+ - GAN
