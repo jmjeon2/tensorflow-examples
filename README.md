@@ -6,6 +6,7 @@
  3. CNN_CIFAR10
  4. CNN_CIFAR10_VAL_SAV
  5. VGG16_CIFAR10
+ 6. GoogLenet_CIFAR10
 
 * Unsupervised Learning
  1. Auto-Encoder
