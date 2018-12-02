@@ -1,5 +1,3 @@
-# tensorflow-examples
-
 ## Supervised Learning
  * CNN
  1. CNN_MNIST
