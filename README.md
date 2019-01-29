@@ -2,6 +2,10 @@
  * K-means
  
 ## Supervised Learning
+ * DNN
+  1. Linear Regression
+  2. Logistic Regression
+  
  * CNN
   1. CNN_MNIST
   2. CNN_MNIST_API
