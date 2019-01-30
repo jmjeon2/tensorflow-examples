@@ -2,9 +2,10 @@
  * K-means
  
 ## Supervised Learning
- * DNN
+ * NN
   1. Linear Regression
   2. Logistic Regression
+  3. Softmax_MNIST
   
  * CNN
   1. CNN_MNIST
